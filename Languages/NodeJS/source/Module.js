@@ -27,7 +27,7 @@ console.error = (...args) => send('error',args);
 
 function send(type,data){
 
-  if(!data)
+  if(data === undefined)
     [ type , data ] = [ defaultType , type ];
 
 
