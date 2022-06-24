@@ -1,28 +1,24 @@
-# NodeJS Native App
+
+# Usage
+
+<br>
+
+```javascript
+
+const { send , handle , listen } = require('native-msg');
 
 
-### App
+//  Handle incoming messages
 
-```js
-
-
-  const { send , handle , listen } = require('native-msg');
-
-
-
-  //  Handle Incoming Messages
-
-  handle((msg) => {
-    if(msg === 'Bake the cakes!')
-      send(`The cakes have been baked!`);
-  });
+handle((message) => {
+    
+    if(message === 'Bake the cakes!')
+        send(`The cakes have been baked!`);
+});
 
 
-  //  Start Listening to STDIN
+//  Start listening to STDIN
 
-  listen();
-
+listen();
 
 ```
-
-Implementation of an [Example Extension](https://github.com/NativeMessaging/Wiki/Chrome/example/)
